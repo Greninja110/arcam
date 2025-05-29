@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Mode Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Mode"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/radio_image_only"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image Only"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_audio_only"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Audio Only"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_video_only"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Video Only"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_audio_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Audio + Video"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <!-- Quality Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stream Quality"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_quality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/radio_480p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="480p (Low)"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_720p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="720p (Medium)"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radio_1080p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1080p (High)"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <!-- Start Stream Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_stream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Stream"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:enabled="false"
+            app:cornerRadius="8dp" />
+
+        <!-- Show Status Button (Initially Hidden) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_show_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Status"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:cornerRadius="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- Stream Status (Initially Hidden) -->
+        <TextView
+            android:id="@+id/tv_stream_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/button_selector"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

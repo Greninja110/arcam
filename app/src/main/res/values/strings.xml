@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arcam</string>
+
+    <!-- Bottom Navigation -->
+    <string name="navigation_mode">Mode</string>
+    <string name="navigation_stream">Stream</string>
+    <string name="navigation_settings">Settings</string>
+
+    <!-- Mode Fragment -->
+    <string name="select_mode">Select Mode</string>
+    <string name="image_only">Image Only</string>
+    <string name="audio_only">Audio Only</string>
+    <string name="video_only">Video Only</string>
+    <string name="audio_video">Audio + Video</string>
+    <string name="stream_quality">Stream Quality</string>
+    <string name="quality_low">480p (Low)</string>
+    <string name="quality_medium">720p (Medium)</string>
+    <string name="quality_high">1080p (High)</string>
+    <string name="start_stream">Start Stream</string>
+    <string name="show_status">Show Status</string>
+
+    <!-- Stream Fragment -->
+    <string name="status_connecting">Status: Connecting...</string>
+    <string name="url_loading">URL: Loading...</string>
+    <string name="stats_loading">Stats: Loading...</string>
+    <string name="capture">Capture</string>
+    <string name="flash_off">Flash OFF</string>
+    <string name="flash_on">Flash ON</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">-</string>
+    <string name="stop_streaming">Stop Streaming</string>
+    <string name="audio_streaming">Audio Streaming</string>
+
+    <!-- Settings Fragment -->
+    <string name="server_settings">Server Settings</string>
+    <string name="server_ip_address">Server IP Address</string>
+    <string name="port">Port</string>
+    <string name="save">Save</string>
+    <string name="video_settings">Video Settings</string>
+    <string name="frame_rate">Frame Rate</string>
+    <string name="audio_settings">Audio Settings</string>
+    <string name="enable_audio">Enable Audio</string>
+    <string name="sample_rate">Sample Rate</string>
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="hardware_acceleration">Hardware Acceleration</string>
+    <string name="auto_reconnect">Auto Reconnect</string>
+    <string name="buffer_size">Buffer Size</string>
+    <string name="debug_settings">Debug Settings</string>
+    <string name="debug_mode">Debug Mode</string>
+    <string name="view_logs">View Logs</string>
+    <string name="clear_logs">Clear Logs</string>
+    <string name="export">Export</string>
+    <string name="about">About</string>
+    <string name="reset_settings">Reset Settings</string>
+    <string name="check_updates">Check Updates</string>
+    <string name="version">Version 1.0</string>
+    <string name="made_by">Made by Abhijeet</string>
+
+    <!-- Arrays -->
+    <string-array name="audio_sample_rates">
+        <item>44100 Hz</item>
+        <item>48000 Hz</item>
+    </string-array>
+
+    <!-- Permissions -->
+    <string name="permission_denied_message">Camera and Microphone permissions are required for streaming</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Arcam Streaming</string>
+    <string name="notification_channel_description">Streaming notification for Arcam</string>
+    <string name="notification_title">Arcam Streaming</string>
+    <string name="notification_content">Streaming %s</string>
+
+    <!-- Errors -->
+    <string name="error_no_network">No network connection available</string>
+    <string name="error_server_unreachable">Server unreachable</string>
+    <string name="error_invalid_ip">Invalid IP address format</string>
+    <string name="error_invalid_port">Invalid port number</string>
+    <string name="error_port_range">Port must be between 1 and 65535</string>
+    <string name="error_empty_fields">Please enter valid server IP and port</string>
+
+    <!-- Success Messages -->
+    <string name="success_server_saved">Server settings saved</string>
+    <string name="success_logs_cleared">Logs cleared</string>
+    <string name="success_settings_reset">Settings reset to defaults</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_clear_logs_title">Clear Logs</string>
+    <string name="dialog_clear_logs_message">Are you sure you want to clear all logs?</string>
+    <string name="dialog_reset_title">Reset Settings</string>
+    <string name="dialog_reset_message">This will reset all settings to default values. Continue?</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_reset">Reset</string>
+</resources>
