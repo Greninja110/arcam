@@ -225,8 +225,8 @@ class StreamFragment : Fragment() {
             it.cameraControl.enableTorch(isFlashOn)
 
             binding.btnFlash.setImageResource(
-                if (isFlashOn) android.R.drawable.ic_menu_flash_on
-                else android.R.drawable.ic_menu_flash_off
+                if (isFlashOn) R.drawable.ic_menu_flash_on
+                else R.drawable.ic_menu_flash_off
             )
 
             binding.btnFlash.contentDescription = getString(
@@ -279,7 +279,11 @@ class StreamFragment : Fragment() {
             addAction(StreamingService.ACTION_STREAM_URL)
         }
 
-        requireContext().registerReceiver(streamStatusReceiver, filter)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            requireContext().registerReceiver(streamStatusReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+        } else {
+            requireContext().registerReceiver(streamStatusReceiver, filter)
+        }
     }
 
     private fun stopStreaming() {
