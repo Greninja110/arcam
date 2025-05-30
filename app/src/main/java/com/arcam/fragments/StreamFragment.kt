@@ -24,6 +24,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import kotlin.math.max
 import kotlin.math.min
+import android.content.Context.RECEIVER_NOT_EXPORTED
 
 class StreamFragment : Fragment() {
 
@@ -280,7 +281,7 @@ class StreamFragment : Fragment() {
         }
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
-            requireContext().registerReceiver(streamStatusReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+            requireContext().registerReceiver(streamStatusReceiver, filter, RECEIVER_NOT_EXPORTED)
         } else {
             requireContext().registerReceiver(streamStatusReceiver, filter)
         }
