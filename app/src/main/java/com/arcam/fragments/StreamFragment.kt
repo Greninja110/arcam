@@ -9,7 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.camera.core.*
+import androidx.camera.core.Camera
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -24,7 +27,9 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import kotlin.math.max
 import kotlin.math.min
-import android.content.Context.RECEIVER_NOT_EXPORTED
+import android.os.Build
+
+
 
 class StreamFragment : Fragment() {
 
@@ -280,8 +285,13 @@ class StreamFragment : Fragment() {
             addAction(StreamingService.ACTION_STREAM_URL)
         }
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
-            requireContext().registerReceiver(streamStatusReceiver, filter, RECEIVER_NOT_EXPORTED)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            ContextCompat.registerReceiver(
+                requireContext(),
+                streamStatusReceiver,
+                filter,
+                ContextCompat.RECEIVER_NOT_EXPORTED
+            )
         } else {
             requireContext().registerReceiver(streamStatusReceiver, filter)
         }
